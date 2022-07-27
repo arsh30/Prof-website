@@ -1,0 +1,98 @@
+1. main file index.html. Create Navbar in Html in "Index.html". [Note: jo bhi elem and tags honge unko classes and id denge to grab that thing easily]
+
+    1.1) Navbar create: which comes under "header tag"
+
+    1.2) Reuseable css -> yeh har webiste me almost krege 
+            @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&family=Work+Sans:wght@400;500&display=swap");
+            * {
+            /* Always give these three things to every website */
+            margin: 0;
+            box-sizing: border-box;
+            padding: 0;
+            font-family: "Work Sans", sans-serif;
+            }
+
+            /* Css variables create ->
+            means  root ko target krege
+            suppose website hai usme jo paragraph ka color hai heading ka color hai vo har jgh use hora hai 
+            eg agr client ne bol diya ki jidr jidr paragraph hai uska color yeh nhi chaiye kuch or chaiye which is very lengthy process
+            so we create through css variables
+            */
+
+            :root {
+            --heading: rgb(0 10 25);
+            /* in rgb -> jitna right to left ko jate jaege that is tint [ means color kam hora hoega ]
+            jo particular sec hai ie is hue 
+            jitna right jate jaege color dark hojega ie shades
+            */
+            --para: #777;
+            --para-tint: #e4e4e4;
+            --white: #fff;
+            --helper: #8490ff;
+            --helper-tint: #f3f4ff;
+            --bg: rgb(249 249 255);
+            --gradient: linear-gradient(0deg, rgb(132 144 255) 0% rgb(98 189 252) 100%);
+            --gradientSupport: --webkit-linear-gradient(
+                0deg,
+                rgb(132 144 255) 0%,
+                rgb(98 189 252) 100%
+            );
+            --shadow: 0px 0px 20px 0px rgb(132 144 255 / 20%);
+            /* left side are classes that we make:
+            eg: helper class jo ikdum chota dikhra hai they all are helper colors and helper color ka tint vo bhi ikdum light use kra hai */
+            }
+
+            html {
+            /* isme konsi font family use krne wale hai search it on google ie is google fonts
+            mostly try to use 2 font in whole webite heading kuch or and paragraph kuch or
+            
+            1) for para -> regular 400 and 500 work sans
+            2) for heading -> poppins [jinka font weight thoda jyda ho ie medium 500 600 700 800 inko select krke rakhege
+            
+            [import wala section :  link copy krke sabse upr paste krdege in css file and css rules jo honge usme se
+            paste krdege into the universal operator]
+            */
+
+            font-size: 62.5%;
+            /* 1rem = 10px or 16px */
+            }
+
+            h1,
+            h2,
+            h3,
+            h4 {
+            font-family: "Poppins", sans-serif;
+            }
+
+            h1 {
+            /*means j o css variable use krege through var function keyword*/
+            color: var(--heading);
+            font-size: 6rem;
+            font-weight: 600;
+            }
+
+            h3 {
+            font-size: 1.8rem;
+            font-weight: 400;
+            }
+
+            p {
+            color: var(--para);
+            /* line ki height minimum 1.6 rem honi hi chaiye agr kuch read wala use krre hai toh */
+            line-height: 1.6;
+            font-size: 1.7rem;
+            }
+
+            a {
+            text-decoration: none; /*means jabhi anchor tag hota hai usme dot and underline remove krdega*/
+            }
+
+            li {
+                /* remove bullets */
+            list-style: none;
+            }
+
+        ---------------------
+
+    1.3) Adding style to Navbar:-> add this extension for css : intellinsense for css class name in html
+ 
